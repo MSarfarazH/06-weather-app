@@ -14,13 +14,13 @@ searchButton.addEventListener("click", weatherData);
 saveSearchHistory()
 
 //For todays date
-var today = new Date();
+var today = new Date(date);
 var date = today.getFullYear()+'-'+(today.getMonth()+1)+'-'+today.getDate();
 
 //What the 'Submit' button does; Fetching api data and displaying it.
 function weatherData() {
   const searchValue = searchInput.value;
-  
+
   var lat;
   var lon;
   console.log(searchValue);
@@ -43,23 +43,28 @@ function weatherData() {
       )
         .then((response) => response.json())
         .then((data) => {
+        console.log(data);
         
         displayWeather(data)
         });
     });
     function displayWeather(data) {
 
-        const dateEl = document.createElement("h3")
-        dateEl.innerText = `Date: ${today}`
-        currentEl.appendChild(dateEl)
-
-        const humidityEl = document.createElement("h3")
-        humidityEl.innerText = `humidity: ${data.current.humidity}%`
-        currentEl.appendChild(humidityEl)
+        const dateEl = document.querySelector("#currentDate")
+        dateEl.innerText = `Date: ${today.Date}`
         
-        const tempEl = document.createElement("h3")
-        tempEl.innerText = `temp: ${data.current.temp}`
-        currentEl.appendChild(tempEl)
+        const windEl = document.querySelector("#wind")
+        windEl.innerText = `Wind: ${data.current.wind_speed} MPH`
+
+        const tempEl = document.querySelector("#temp")
+        tempEl.innerText = `Temp: ${data.current.temp}`
+
+        const humidityEl = document.querySelector("#humidity")
+        humidityEl.innerText = `humidity: ${data.current.humidity}%`
+
+        const uvEl = document.querySelector("#uvindex")
+        uvEl.innerText = `UV index: ${data.current.uvi}`
+        
 
         
     }
