@@ -46,6 +46,7 @@ function weatherData() {
         console.log(data);
         
         displayWeather(data)
+        displayForecast(data)
         });
     });
     function displayWeather(data) {
@@ -66,6 +67,24 @@ function weatherData() {
         uvEl.innerText = `UV index: ${data.current.uvi}`
         
     }
+    function displayForecast(data) {
+
+        const forecastDay1 = document.querySelector("#forecast1")
+        forecastDay1.innerText = ` ${data.daily[0].temp.day}`
+        console.log(data.daily[0].temp.day)
+
+    //     const forecastDay2 = document.querySelector("#forecast2")
+    //     forecastDay2.innerText = `: ${}`
+
+    //     const forecastDay3 = document.querySelector("#forecast3")
+    //     forecastDay3.innerText = `: ${}`
+
+    //     const forecastDay4 = document.querySelector("#forecast4")
+    //     forecastDay4.innerText = `: ${}`
+
+    //     const forecastDay5 = document.querySelector("#forecast5")
+    //     forecastDay5.innerText = `: ${}`
+    // }
       }
     
-
+    }
