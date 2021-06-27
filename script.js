@@ -5,24 +5,24 @@ const searchButton = document.querySelector("#search-button");
 const currentEl = document.querySelector("#currentWeather");
 const cities = []
 
-var saveSearchHistory = function(){
-    localStorage.setItem("cities", JSON.stringify(cities));
-};
+// var saveSearchHistory = function(){
+//     localStorage.setItem("cities", JSON.stringify(cities));
+// };
 
 //Assigning action to the submit button
 searchButton.addEventListener("click", weatherData);
-saveSearchHistory()
+// saveSearchHistory()
 
 //For todays date
-var today = new Date(date);
-var date = today.getFullYear()+'-'+(today.getMonth()+1)+'-'+today.getDate();
+var today = new Date();
+var date = today.getMonth()+'/'+(today.getDate()+'/'+today.getFullYear());
 
 //What the 'Submit' button does; Fetching api data and displaying it.
 function weatherData() {
   const searchValue = searchInput.value;
 
-  var lat;
-  var lon;
+  let lat;
+  let lon;
   console.log(searchValue);
   fetch(
     `https://api.openweathermap.org/geo/1.0/direct?q=${searchValue}&appid=4faf9d217984276ad6eaf8a085f08b57`
@@ -51,7 +51,7 @@ function weatherData() {
     function displayWeather(data) {
 
         const dateEl = document.querySelector("#currentDate")
-        dateEl.innerText = `Date: ${today.Date}`
+        dateEl.innerText = `Date: ${date}`
         
         const windEl = document.querySelector("#wind")
         windEl.innerText = `Wind: ${data.current.wind_speed} MPH`
@@ -64,8 +64,6 @@ function weatherData() {
 
         const uvEl = document.querySelector("#uvindex")
         uvEl.innerText = `UV index: ${data.current.uvi}`
-        
-
         
     }
       }
