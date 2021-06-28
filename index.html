@@ -15,7 +15,7 @@
         <h1>Weather Dashboard</h1>
     </header>
     <section class="row justify-content-around" id="rowOne">
-        <div class="col-4">
+        <div id="searchSection" class="col-4">
             <h2>Search for a City:</h2>
             <input id="search-input" class="form-input w-45" type="text" placeholder="Search!">
             <button id="search-button" class="btn btn-info btn-block">Search</button>
@@ -28,17 +28,17 @@
             <div id="wind"> </div>
             <div id="humidity"> </div>
             <div id="uvindex"> </div>
-        </div>
-    </section>
-    <section class="row justify-content-around" id="rowTwo">
-        <div class="col-12" id="fiveDay">
-        </div>
-        <div class="row">
-            <div id="forecast1" class="col forecast bg-primary text-white ml-3 mb-3 squared"></div>
-            <div id="forecast2" class="col forecast bg-primary text-white ml-3 mb-3 squared"></div>
-            <div id="forecast3" class="col forecast bg-primary text-white ml-3 mb-3 squared"></div>
-            <div id="forecast4" class="col forecast bg-primary text-white ml-3 mb-3 squared"></div>
-            <div id="forecast5" class="col forecast bg-primary text-white ml-3 mb-3 squared"></div>
+        
+            <section class="row justify-content-around" id="rowTwo">
+                <div class="col-12" id="fiveDay">
+                    <h2>5 day Forecast</h2>
+                    <div id="forecast1" class="col forecast bg-primary text-white ml-3 mb-3 squared"></div>
+                    <div id="forecast2" class="col forecast bg-primary text-white ml-3 mb-3 squared"></div>
+                    <div id="forecast3" class="col forecast bg-primary text-white ml-3 mb-3 squared"></div>
+                    <div id="forecast4" class="col forecast bg-primary text-white ml-3 mb-3 squared"></div>
+                    <div id="forecast5" class="col forecast bg-primary text-white ml-3 mb-3 squared"></div>
+                </div>
+            </section>
         </div>
         </section>
 

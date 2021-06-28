@@ -13,9 +13,14 @@ const cities = []
 searchButton.addEventListener("click", weatherData);
 // saveSearchHistory()
 
-//For todays date
+//For dates
 var today = new Date();
 var date = today.getMonth()+'/'+(today.getDate()+'/'+today.getFullYear());
+var nextDay1 =today.getMonth()+'/'+(today.getDate()+1+'/'+today.getFullYear());
+var nextDay2 =today.getMonth()+'/'+(today.getDate()+2+'/'+today.getFullYear());
+var nextDay3 =today.getMonth()+'/'+(today.getDate()+3+'/'+today.getFullYear());
+var nextDay4 =today.getMonth()+'/'+(today.getDate()+4+'/'+today.getFullYear());
+var nextDay5 =today.getMonth()+'/'+(today.getDate()+5+'/'+today.getFullYear());
 
 //What the 'Submit' button does; Fetching api data and displaying it.
 function weatherData() {
@@ -67,24 +72,24 @@ function weatherData() {
         uvEl.innerText = `UV index: ${data.current.uvi}`
         
     }
-    function displayForecast(data) {
+    function displayForecast(data) {              
 
         const forecastDay1 = document.querySelector("#forecast1")
-        forecastDay1.innerText = ` ${data.daily[0].temp.day}`
-        console.log(data.daily[0].temp.day)
+        forecastDay1.innerText = `Date: ${nextDay1} Temp: ${data.daily[1].temp.day} Wind: ${data.daily[1].wind_speed} Humidity: ${data.daily[1].humidity}`
+        
+        const forecastDay2 = document.querySelector("#forecast2")
+        forecastDay2.innerText = `Date: ${nextDay2} Temp: ${data.daily[2].temp.day} Wind: ${data.daily[2].wind_speed} Humidity: ${data.daily[2].humidity}`
+        
+        const forecastDay3 = document.querySelector("#forecast3")
+        forecastDay3.innerText = `Date: ${nextDay3} Temp: ${data.daily[3].temp.day} Wind: ${data.daily[3].wind_speed} Humidity: ${data.daily[3].humidity}`
+        
+        const forecastDay4 = document.querySelector("#forecast4")
+        forecastDay4.innerText = `Date: ${nextDay4} Temp: ${data.daily[4].temp.day} Wind: ${data.daily[4].wind_speed} Humidity: ${data.daily[4].humidity}`
+        
+        const forecastDay5 = document.querySelector("#forecast5")
+        forecastDay5.innerText = `Date: ${nextDay5} Temp: ${data.daily[5].temp.day} Wind: ${data.daily[5].wind_speed} Humidity: ${data.daily[5].humidity}`
 
-    //     const forecastDay2 = document.querySelector("#forecast2")
-    //     forecastDay2.innerText = `: ${}`
-
-    //     const forecastDay3 = document.querySelector("#forecast3")
-    //     forecastDay3.innerText = `: ${}`
-
-    //     const forecastDay4 = document.querySelector("#forecast4")
-    //     forecastDay4.innerText = `: ${}`
-
-    //     const forecastDay5 = document.querySelector("#forecast5")
-    //     forecastDay5.innerText = `: ${}`
-    // }
+ 
       }
     
     }

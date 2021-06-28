@@ -8,4 +8,6 @@ header {
     color: rgb(0, 247, 255);
   }
 
-  
+  #searchSection {
+      height: 100%
+  }
