@@ -1,7 +1,58 @@
-# Weather-Dashboard
-Unit 06 homework
+# Weather App
+ 
+  ## Licensing:
+  [![license](https://img.shields.io/badge/license-Apache-blue)](https://shields.io)
+  ========================
+  ## Table of Contents 
+  - [Description](#desc)
 
-See the deployed app here:
-https://msarfarazh.github.io/06-weather-app/
+  - [Installation](#reqs)
 
-This app let's the user enter the name of a city in the search bar and click the search button. This app displays the current weather conditions in that city, including temperature, humidity, UV index. furthermore, a 5-day forecast for that city is displayed below the current conditions showing similar information.
+  - [Usage](#usage)
+
+  - [License](#License)
+
+  - [Additional Info](#additional-info)
+
+
+  ## Description:
+  An app which gives you local weather and a 7 day forecast
+
+  _________________________
+
+  
+
+
+  ## Installation:
+  A Web Browser
+
+  _________________________
+
+  
+
+
+  ## Usage:
+  To help users find the current and forecasted weather 
+
+  _________________________
+
+  
+
+
+  ## License:
+  Apache
+
+  _________________________
+
+  
+
+
+  ## Contact Info:
+   - Github: [msarfarazh](https://github.com/msarfarazh)
+  - Email: m.s.hussain@outlook.com
+
+  ______________________________
+
+
+
+
